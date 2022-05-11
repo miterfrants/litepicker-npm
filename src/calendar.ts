@@ -310,7 +310,7 @@ export class Calendar extends LPCore {
 
     const day = document.createElement('div');
     day.className = style.dayItem;
-    day.innerHTML = String(date.getDate());
+    day.innerHTML = `<span class="day-text">${String(date.getDate())}<span>`;
     day.dataset.time = String(date.getTime());
 
     if (date.toDateString() === (new Date()).toDateString()) {
